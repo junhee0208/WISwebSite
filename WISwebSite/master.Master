@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="master.Master.cs" Inherits="WISwebSite.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Welcome Institue of Studies</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <style>
+
+
+            body {
+            }
+
+            #form1 {
+                width:80%;
+                border:solid;
+                border-width:1px;
+                border-color:darkseagreen;
+            }
+
+            .header {
+                width:100%;
+                margin-left:auto;
+                margin-right:auto;
+                
+            }
+
+            #logoImg {
+                margin-left:auto;
+                margin-right:auto;
+            }
+            #bannerImg {
+                margin-left:auto;
+                margin-right:auto;
+                width:100%;
+            }
+
+            #contents {
+                background-color:antiquewhite; 
+                width:80%;
+                margin-left:auto;
+                margin-right:auto;
+            }
+            .imgStyle {
+                width:30px;
+                height:30px;
+            }
+
+            #footer {
+                background-image:url('Properties/ftBanner.jpg');
+            }
+            
+            .auto-style1 {
+                position: absolute;
+                z-index: 2;
+                left: 37px;
+                top: 531px;
+            }
+        </style>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+         <center>
+        <div class="header">
+                <a href="Default.aspx" id="logoImg">
+                    <img src="Properties/wisLogo.png" style="width:15%;"/>
+                </a>
+                <div style="margin-left:auto;margin-right:auto; width:80%;">
+                    <img id="bannerImg" src="Properties/student-banner.jpg"> 
+                </div>
+        </div>
+        </center>               
+        
+        <div id="contents" style="background-color:antiquewhite; 
+                width:960px;
+                margin-left:auto;
+                margin-right:auto;
+                margin-top:0">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        
+        <center>
+            <div id="footer" style="width:960px;height:270px;margin-left:auto;margin-right:auto" >
+                <img src="Properties/ftBanner.jpg" style="z-index:1"/>
+
+                <table align="right" class="auto-style1">
+                    <tr>
+                        <td><img class="imgStyle" src="Properties/instagram.png" style="width:30px;height:30px;"></td>
+                        <td><img class="imgStyle" src="Properties/facebook.png" style="width:30px;height:30px;"></td>
+                        <td><img class="imgStyle" src="Properties/youtube.png" style="width:30px;height:30px;"></td>
+                        <td><img class="imgStyle" src="Properties/tweeter.png" style="width:30px;height:30px;"></td>
+                    </tr>
+                </table>
+            </div>
+        </center>
+    </form>
+</body>
+</html>
