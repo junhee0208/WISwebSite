@@ -67,6 +67,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="docker-compose.yml" />
+    <Content Include="Dockerfile" />
     <Content Include="Properties\facebook.png" />
     <Content Include="Properties\ftBanner.jpg" />
     <Content Include="Properties\instagram.png" />
