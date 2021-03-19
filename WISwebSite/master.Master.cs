@@ -13,5 +13,10 @@ namespace WISwebSite
         {
 
         }
+
+        protected void Menu1_MenuItemClick()
+        {
+
+        }
     }
 }
