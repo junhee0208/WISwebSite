@@ -1,0 +1,27 @@
+version: "3.8"
+
+networks:
+  localdev:
+    name: localdev
+
+services:
+  main-server:
+    build: .
+    restart: always
+    ports:
+      - "5001:80"
+    networks:
+      - localdev
+
+  db-server:
+    image: "mcr.microsoft.com/mssql/server"
+    container_name: db-server
+    environment:
+      SA_PASSWORD: "June123456"
+      ACCEPT_EULA: "Y"
+    volumes:
+      - ~/data/mssql:/var/opt/mssql
+    ports:
+      - "1433:1433"
+    networks:
+      - localdev
