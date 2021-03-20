@@ -1,0 +1,145 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="master.Master.cs" Inherits="WISwebSite.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Welcome Institue of Studies</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+     
+    </asp:ContentPlaceHolder>
+
+       <style>
+
+            body {
+            }
+
+            #form1 {
+                width:100%;
+                border:solid;
+                border-width:1px;
+                border-color:darkseagreen;
+            }
+
+            .header {
+                width:960px;
+                margin-left:auto; 
+                margin-right:auto
+            }
+
+            #logoImg {
+            }
+
+            #bannerImg {
+                margin-left:auto;
+                margin-right:auto;
+                width:100%;
+            }
+
+            #contents {
+                background-color:antiquewhite; 
+                width:960px;
+                margin-left:auto;
+                margin-right:auto;
+                margin-top:0
+            }
+            .imgStyle {
+                width:30px;
+                height:30px;
+            }
+
+            #footer {
+                width:960px; 
+                height:270px; 
+                margin-left:auto; 
+                margin-right:auto;
+                background-image:url('Properties/ftBanner.jpg')
+            }
+
+            #tblFooter{
+                width:80%;
+                margin-left:auto;
+                margin-right:auto;
+            }
+
+           #socialLinks {
+               margin-top:7%;
+               margin-left:5%;
+               float:left;
+           }
+
+               #socialLinks td img{
+                   width:45px;height:45px;
+               }
+            
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+        <div class="header">
+            <table>
+                <tr>
+                    <td style="width:30%"> <a href="Default.aspx" id="logoImg">
+                        <img src="Properties/wisLogo.png" style="width:80%;"/></a>
+                    </td>
+                    <td style="width:70%"> 
+                        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" BackColor="#FFFBD6" DynamicHorizontalOffset="2" Font-Bold="True" Font-Names="Verdana" Font-Size="Medium" ForeColor="#990000" StaticSubMenuIndent="10px" Width="550px">
+                            <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                            <DynamicMenuItemStyle HorizontalPadding="15px" VerticalPadding="2px" />
+                            <DynamicMenuStyle BackColor="#FFFBD6" />
+                            <DynamicSelectedStyle BackColor="#FFCC66" />
+                            <Items>
+                                <asp:MenuItem Text="Programs" Value="Programs"></asp:MenuItem>
+                                <asp:MenuItem Text="Student Info" Value="Student Info"></asp:MenuItem>
+                                <asp:MenuItem Text="Staff Info" Value="Staff Info"></asp:MenuItem>
+                                <asp:MenuItem Text="Enrollment" Value="testset"></asp:MenuItem>
+                            </Items>
+                            <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                            <StaticMenuItemStyle HorizontalPadding="15px" VerticalPadding="2px" />
+                            <StaticSelectedStyle BackColor="#FFCC66" />
+                        </asp:Menu>
+                    </td>
+                </tr>
+            </table>
+            <div>
+                <img id="bannerImg" src="Properties/student-banner.jpg"> 
+            </div>
+        </div>
+
+        <div id="contents">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        
+        <div id="footer">
+            <br/><br /><br /><br />
+            <table id="tblFooter">
+                <tr>
+                    <td style="width:30%">
+                        <a href="Default.aspx">
+                            <img src="Properties/wisLogo.png" style="width:80%;"/>
+                        </a>
+                    </td>
+                    <td style="width:40%">
+                         <p style="font-family:Verdana;font-size:18px; margin-top:10px">
+                            &#169;Welcome Institute of Studies<br>
+                            All rights reserved<br>
+                        </p>
+                    </td>
+                    <td style="width:40%">
+                        <table id="socialLinks">
+                            <tr>
+                                <td><img class="imgStyle" src="Properties/instagram.png"></td>
+                                <td><img class="imgStyle" src="Properties/facebook.png" ></td>
+                                <td><img class="imgStyle" src="Properties/youtube.png"  ></td>
+                                <td><img class="imgStyle" src="Properties/tweeter.png"  ></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
