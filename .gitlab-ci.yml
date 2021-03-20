@@ -1,0 +1,29 @@
+wis_job_1: 
+  stages:
+    - build
+    - deploy
+  build:
+    stages: build
+    before_script:
+      - 'dotnet restore'
+    script:
+      - echo "Building the app"
+      - "dotnet publish WISwebSite.sln -c release"
+    artifacts:
+      untracked: true
+    only:
+      - release
+  
+  deploy_stating:
+    stage: deploy
+    script:
+      - echo "Deploy to IIS"
+      - "dotnet publish WISwebSite\\WISwebSite.csproj - c release -o release 
+      
+      
+      
+  
+       
+       
+       
+       
